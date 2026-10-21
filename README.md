@@ -1,11 +1,25 @@
-<div align="center">
+# Registro de Atividade Diária - Tempos e Movimentos
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+Aplicativo para registro de tempos e movimentos de equipes de manutenção ferroviária.
 
-  <h1>Built with AI Studio</h2>
+## Funcionalidades
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+- Registro em tempo real de eventos de jornada (início/fim, deslocamentos, paradas, refeições, etc.)
+- Cálculo automático de durações entre eventos
+- Cadastro de equipe/colaboradores com persistência local
+- Geração de relatórios em PDF (modelo TIC Trens) e CSV
+- Compartilhamento direto via WhatsApp
+- Dashboard com gráficos de produção e perdas
+- Sincronização do último defeito encontrado em tempo real
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## Tecnologias
 
-</div>
+- TanStack Start + React 19
+- TypeScript
+- Tailwind CSS
+- Lovable Cloud
+- jsPDF / jspdf-autotable
+
+## Uso
+
+Acesse o app publicado e utilize os botões de evento para registrar o dia de trabalho. Ao final, gere o relatório em PDF ou CSV e envie pelo WhatsApp.

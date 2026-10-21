@@ -1,0 +1,6 @@
+{
+  "name": "Registro de Atividade Diária",
+  "description": "Registro de atividades diárias, tempos e movimentos de atividades ferroviárias com checklist de equipamentos e dashboard analítico",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

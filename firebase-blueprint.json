@@ -1,0 +1,68 @@
+{
+  "entities": {
+    "Report": {
+      "title": "Relatório de Atividade Diária",
+      "description": "Registro completo de atividade diária, tempos e movimentos",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "createdAt": { "type": "number" },
+        "updatedAt": { "type": "number" },
+        "data": { "type": "string" },
+        "nome": { "type": "string" },
+        "local": { "type": "string" },
+        "sinais": { "type": "string" },
+        "linha": { "type": "string" },
+        "via": { "type": "string" },
+        "gda": { "type": "string" },
+        "om": { "type": "string" },
+        "empresa": { "type": "string" },
+        "atividade": { "type": "string" },
+        "colaboradores": { "type": "string" },
+        "descritivo": { "type": "string" },
+        "kmProgramado": { "type": "string" },
+        "executado": { "type": "string" },
+        "observacaoGeral": { "type": "string" },
+        "telefone": { "type": "string" },
+        "events": { "type": "array" },
+        "totals": { "type": "object" }
+      },
+      "required": ["id", "createdAt", "data", "nome"]
+    },
+    "EquipmentChecklist": {
+      "title": "Checklist de Equipamento",
+      "description": "Inspeção diária de máquinas, veículos e implementos operacionais",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "createdAt": { "type": "number" },
+        "updatedAt": { "type": "number" },
+        "data": { "type": "string" },
+        "hora": { "type": "string" },
+        "equipamento": { "type": "string" },
+        "prefixo": { "type": "string" },
+        "horimetroMotor": { "type": "string" },
+        "horimetroImplementoFerroviario": { "type": "string" },
+        "horimetroGerador": { "type": "string" },
+        "quilometragemCaminhao": { "type": "string" },
+        "operador": { "type": "string" },
+        "turno": { "type": "string" },
+        "local": { "type": "string" },
+        "statusGeral": { "type": "string" },
+        "observacoesGerais": { "type": "string" },
+        "items": { "type": "array" }
+      },
+      "required": ["id", "createdAt", "data", "equipamento", "operador"]
+    }
+  },
+  "firestore": {
+    "/relatorios/{reportId}": {
+      "schema": "Report",
+      "description": "Coleção de relatórios de atividades diárias na nuvem"
+    },
+    "/checklists_equipamento/{checklistId}": {
+      "schema": "EquipmentChecklist",
+      "description": "Coleção de checklists de máquinas e equipamentos na nuvem"
+    }
+  }
+}
